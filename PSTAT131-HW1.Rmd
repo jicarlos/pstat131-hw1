@@ -53,8 +53,14 @@ How would a voter’s likelihood of support for the candidate change if they had
 Inferential because the end goal is to figure out whether the feature is significant to the problem. In this case, it would be whether personal contact is significant to voter support. 
 
 E1.
+```{r, include=FALSE}
+library(tidyverse)
+library(ggplot2)
+```
 
-
+```{r}
+barplot(mpg$hwy)
+```
 
 E2.
 
