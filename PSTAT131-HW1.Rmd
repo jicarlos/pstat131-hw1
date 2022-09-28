@@ -8,3 +8,66 @@ date: '2022-09-28'
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Q1.
+
+Supervised learning is a machine learning approach in which we teach the machine through the use of labelled data sets. Unsupervised learning is when the machine is taught without the use of labelled data sets and guidance. The difference is that in supervised learning we are able to see the answer key, whereas in unsupervised learning we never see it.
+
+Q2.
+
+The regression model relates to quantitative or numerical data, whereas the classification model relates to qualitative or categorical data.
+
+Q3.
+
+In regression problems, two commonly used metrics are 
+
+In classification problems, two commonly used metrics are 
+
+Q4.
+
+Descriptive models: choosing a model that emphasizes a trend in the data.
+
+Inferential models: seeing which data is significant and whether there is a relationship between the predictors.
+
+Predictive  models: predicting a response while trying to get the smallest error and focuses on getting a proper set of predictors.
+
+Q5.
+
+mechanistic: making predictions based on your understanding of the real world.
+
+empirically-driven: making predictions by experimenting and observing the outcome when given certain circumstances.
+
+They differ by mechanistic and empirically-driven base their assumptions are different material where mechanistic focuses on their belief of what would happen based on what they know, while empirically-driven focuses on their prediction based on what they know happened before given similar circumstances. They are the same because they are both based on previous understandings of the circumstance. 
+
+I think empirically-driven is easier to understand because it is solely based on prior experiments and is much more conclusive where mechanistic could be different depending on the person you're talking to.
+
+Depending on question and which method is being done, it is possible that there would be a higher bias especially when given a mechanistic approach because it is of your own belief of the world which would in turn mean that there is some bias in play. 
+
+Q6.
+
+Given a voter’s profile/data, how likely is it that they will vote in favor of the candidate?
+
+Predictive because the end goal is to predict the $Y$ given certain predictors. In this case, they are trying to predict if the voter will vote for the candidate given their profile/data.
+
+How would a voter’s likelihood of support for the candidate change if they had personal contact with the candidate?
+
+Inferential because the end goal is to figure out whether the feature is significant to the problem. In this case, it would be whether personal contact is significant to voter support. 
+
+E1.
+
+
+
+E2.
+
+
+
+E3.
+
+
+
+E4.
+
+
+
+E5.
+
+
