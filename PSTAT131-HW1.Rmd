@@ -1,0 +1,10 @@
+---
+title: "PSTAT131-HW1"
+output: pdf_document
+date: '2022-09-28'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
