@@ -18,9 +18,9 @@ The regression model relates to quantitative or numerical data, whereas the clas
 
 Q3.
 
-In regression problems, two commonly used metrics are 
+In regression problems, two commonly used metrics are MSE, and MAE.
 
-In classification problems, two commonly used metrics are 
+In classification problems, two commonly used metrics are accuracy and precision.
 
 Q4.
 
@@ -59,21 +59,33 @@ library(ggplot2)
 ```
 
 ```{r}
-barplot(mpg$hwy)
+ggplot(data=mpg, aes(x=hwy)) + geom_histogram(binwidth = 1)
 ```
+I can see that the majority of the data has counts of around 15 or less, while 3 highways appear to be more frequent than the rest.
 
 E2.
-
-
+```{r}
+ggplot(mpg, aes(x=hwy, y=cty)) + geom_point()
+```
+It notice that the points are form almost a straight line and if there were a line through the center of the points, the majority of them would fall close to that line. There appears to be a positive linear relationship between highway and city. The mpg in the city and the mpg on highways are correlated in some way.
 
 E3.
-
-
+```{r}
+ggplot(data=mpg, aes(x=reorder(manufacturer, manufacturer, length))) + geom_bar() + coord_flip()
+```
+Dodge produced the most cars and Lincoln produced the least cars.
 
 E4.
-
-
+```{r}
+ggplot(data=mpg, aes(x=hwy , group=cyl)) + geom_boxplot()
+```
+There do not seem to be any clear patterns except that the means for the 3rd and the 4th box are around the same value.
 
 E5.
+```{r, include=FALSE}
+library(corrplot)
+```
 
+```{r}
 
+```
