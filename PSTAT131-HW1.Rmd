@@ -18,9 +18,9 @@ The regression model relates to quantitative or numerical data, whereas the clas
 
 Q3.
 
-In regression problems, two commonly used metrics are MSE, and MAE.
+In regression problems, two commonly used metrics are $\hat f(x_0) = \mathrm{E}[Y \mid X=x_0]$ and $\mathrm{Var}(\epsilon)$
 
-In classification problems, two commonly used metrics are accuracy and precision.
+In classification problems, two commonly used metrics are $\hat y_0 = \mathrm{argmax}_j \{ \mathrm{Prob} (Y = j \mid X = x_0 \}$ and $1-\mathrm{E}[\max _j \operatorname{Prob}(Y=j \mid X)]$.
 
 Q4.
 
@@ -67,7 +67,7 @@ E2.
 ```{r}
 ggplot(mpg, aes(x=hwy, y=cty)) + geom_point()
 ```
-It notice that the points are form almost a straight line and if there were a line through the center of the points, the majority of them would fall close to that line. There appears to be a positive linear relationship between highway and city. The mpg in the city and the mpg on highways are correlated in some way.
+I notice that the points form almost a straight line and if there were a line through the center of the points, the majority of them would fall close to that line. There appears to be a positive linear relationship between highway and city. The mpg in the city and the mpg on highways are correlated in some way.
 
 E3.
 ```{r}
@@ -79,7 +79,7 @@ E4.
 ```{r}
 ggplot(data=mpg, aes(x=hwy , group=cyl)) + geom_boxplot()
 ```
-There do not seem to be any clear patterns except that the means for the 3rd and the 4th box are around the same value.
+There does not seem to be any clear patterns except that the means for the 3rd and the 4th box are around the same value.
 
 E5.
 ```{r, include=FALSE}
@@ -87,5 +87,10 @@ library(corrplot)
 ```
 
 ```{r}
+mpg_new <- mpg[, unlist(lapply(mpg, is.numeric))]
+mpg_corr <- cor(mpg_new)
 
+corrplot(mpg_corr, order = 'FPC', type = 'lower', diag = FALSE)
 ```
+
+(cty + hwy), and (displ + cyl) are postively correlated. (year + displ), and (year + cyl) are very slightly positively correlated, as well. (displ + cty), (displ + hwy), and (cyl + cty), (cyl + hwy) are negatively correlated. (year + cty) are very slightly negatively correlated, as well. For the most part, I think the relationships do make sense. However, it is a little odd how the cty and displ is negatively correlated with cty and hwy.
